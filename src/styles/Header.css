@@ -310,6 +310,7 @@
   font-size: 0.75rem;
   padding: 12px 36px;
   letter-spacing: 2px;
+  margin-bottom: 98px;
 }
 
 .lang-eng .sidebar-links li {
@@ -341,6 +342,7 @@
   display: block;
   width: 100%;
   padding: 0;
+  font-size: 1.2rem;
 }
 
 /* Remove default anchor styles from logo when wrapped in Link */

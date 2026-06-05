@@ -32,8 +32,8 @@ function Cta() {
           </h2>
           <p className={`cta-desc ${isGeo ? 'geo' : 'eng'}`}>
             {isGeo
-              ? 'თუ გსურთ უძრავი ქონების შერჩევაში დაგეხმაროთ გამოცდილი გუნდი, დაგვიკავშირდით — მზად ვართ თქვენთვის საუკეთესო გადაწყვეტილება მოვძებნოთ.'
-              : 'If you would like our experienced team to help you find the right property, get in touch — we are ready to find the best solution for you.'}
+              ? 'თუ გსურთ უძრავი ქონების შერჩევაში დაგეხმაროთ გამოცდილი გუნდი, დაგვიკავშირდით - მზად ვართ თქვენთვის საუკეთესო გადაწყვეტილება მოვძებნოთ.'
+              : 'If you would like our experienced team to help you find the right property, get in touch - we are ready to find the best solution for you.'}
           </p>
         </div>
 
