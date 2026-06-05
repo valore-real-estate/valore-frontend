@@ -219,6 +219,10 @@
     transition: width 0.25s ease;
   }
 
+  .cat-card:hover .cat-card-img {
+  transform: scale(1);
+}
+
   .cat-card-name.eng { font-size: 12px; }
   .cat-card-name.geo { font-size: 14px; }
 }
