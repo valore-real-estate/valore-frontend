@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sansation');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap');
+
+/* ─── CONTAINER ─── */
+.category-container {
+  width: 100%;
+  background: transparent;
+  padding: 64px 48px 100px;
+  box-sizing: border-box;
+}
+
+/* ─── TITLE SECTION ─── */
+.category-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 48px;
+}
+
+.cat-title-text {
+  color: #003649;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 14px 0;
+  letter-spacing: 0.01em;
+}
+
+.cat-title-text.eng {
+  font-family: 'Sansation', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.cat-title-text.geo {
+  font-family: 'Noto Sans Georgian', sans-serif;
+}
+
+
+@keyframes shimmer {
+  0%   { background-position: -300px 0; }
+  100% { background-position: 300px 0; }
+}
+
+.cat-title-divider {
+  width: 180px;
+  height: 1.5px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #003649 20%,
+    rgba(255, 255, 255, 0.7) 50%,
+    #003649 80%,
+    transparent 100%
+  );
+  background-size: 300px 100%;
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+
+/* description */
+.cat-title-desc {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: rgba(0, 54, 73, 0.55);
+  line-height: 1.75;
+  margin: 0;
+  font-weight: 400;
+}
+
+.cat-title-desc.geo {
+  font-family: 'Noto Sans Georgian', sans-serif;
+}
+
+.cat-title-desc.eng {
+  font-family: 'Sansation', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* ─── DESKTOP GRID ─── */
+.cat-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+.cat-swiper-wrap {
+  display: none;
+}
+
+/* ─── CARD WRAPPER ─── */
+.cat-card {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 36px;
+  transition: transform 0.28s ease;
+  flex-shrink: 0;
+}
+
+.cat-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ─── FIXED SIZE IMAGE — 320×320 desktop ─── */
+.cat-card-img-wrap {
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 28px rgba(0, 54, 73, 0.18);
+}
+
+.cat-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.38s ease;
+}
+
+.cat-card:hover .cat-card-img {
+  transform: scale(1.05);
+}
+
+/* ─── FLOATING LABEL ─── */
+.cat-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82%;
+  background: #003649;
+  border-radius: 10px;
+  padding: 14px 20px;
+  box-shadow: 0 8px 24px rgba(0, 54, 73, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 54px;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.cat-card-name {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.4;
+  display: block;
+}
+
+.cat-card-name.eng {
+  font-family: 'Sansation', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cat-card-name.geo {
+  font-family: 'Noto Sans Georgian', sans-serif;
+  font-size: 15px;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 768px) {
+  .category-container {
+    padding: 40px 20px 80px;
+  }
+
+  .category-title {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cat-title-text {
+    font-size: clamp(22px, 6vw, 30px);
+    text-align: center;
+  }
+
+  .cat-title-desc {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .cat-grid {
+    display: none;
+  }
+
+  .cat-swiper-wrap {
+    display: block;
+  }
+
+  .cat-swiper {
+    padding-bottom: 48px !important;
+  }
+
+  .cat-card-img-wrap {
+    width: 280px;
+    height: 280px;
+  }
+
+  .cat-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cat-swiper .swiper-pagination-bullet {
+    background: #003649;
+    opacity: 0.35;
+    width: 8px;
+    height: 8px;
+  }
+
+  .cat-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #003649;
+    width: 22px;
+    border-radius: 4px;
+    transition: width 0.25s ease;
+  }
+
+  .cat-card-name.eng { font-size: 12px; }
+  .cat-card-name.geo { font-size: 14px; }
+}
