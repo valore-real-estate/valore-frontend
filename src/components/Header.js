@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import Link from 'next/link'
 import '../styles/Header.css'
 import { useLanguage } from './LanguageContext'
 
@@ -11,6 +12,7 @@ function Header() {
     geo: { home: 'მთავარი', estate: 'უძრავი ქონება', about: 'ჩვენს შესახებ', contact: 'კონტაქტი' },
     eng: { home: 'Home', estate: 'Real Estate', about: 'About Us', contact: 'Contact' }
   }
+
   const t = translations[language]
 
   const scrollToTop = () => {
@@ -28,19 +30,27 @@ function Header() {
         <div className="header-inner">
 
           {/* Logo */}
-          <div className="logo" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
+          <Link href="/" className="logo" onClick={scrollToTop}>
             <span className="logo-text">Valore</span>
             <span className="logo-dot">.</span>
-          </div>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="header-right">
             <nav className="nav">
               <ul className="nav-links">
-                <li onClick={handleHomeClick}>{t.home}</li>
-                <li>{t.estate}</li>
-                <li>{t.about}</li>
-                <li>{t.contact}</li>
+                <li>
+                  <Link href="/" onClick={handleHomeClick}>{t.home}</Link>
+                </li>
+                <li>
+                  <Link href="/properties">{t.estate}</Link>
+                </li>
+                <li>
+                  <Link href="/about">{t.about}</Link>
+                </li>
+                <li>
+                  <Link href="/contact">{t.contact}</Link>
+                </li>
               </ul>
             </nav>
             <button className="lang-switch" onClick={toggleLanguage}>
@@ -54,6 +64,7 @@ function Header() {
             <span></span>
             <span></span>
           </button>
+
         </div>
       </header>
 
@@ -66,19 +77,27 @@ function Header() {
       {/* Mobile Sidebar */}
       <div className={`sidebar ${menuOpen ? 'open' : ''} ${language === 'eng' ? 'lang-eng' : ''}`}>
         <div className="sidebar-header">
-          <div className="logo" onClick={handleHomeClick} style={{ cursor: 'pointer' }}>
+          <Link href="/" className="logo" onClick={handleHomeClick}>
             <span className="logo-text">Valore</span>
             <span className="logo-dot">.</span>
-          </div>
+          </Link>
           <button className="close-btn" onClick={() => setMenuOpen(false)} aria-label="Close menu">
             ✕
           </button>
         </div>
         <ul className="sidebar-links">
-          <li onClick={handleHomeClick}>{t.home}</li>
-          <li onClick={() => setMenuOpen(false)}>{t.estate}</li>
-          <li onClick={() => setMenuOpen(false)}>{t.about}</li>
-          <li onClick={() => setMenuOpen(false)}>{t.contact}</li>
+          <li>
+            <Link href="/" onClick={handleHomeClick}>{t.home}</Link>
+          </li>
+          <li>
+            <Link href="/properties" onClick={() => setMenuOpen(false)}>{t.estate}</Link>
+          </li>
+          <li>
+            <Link href="/about" onClick={() => setMenuOpen(false)}>{t.about}</Link>
+          </li>
+          <li>
+            <Link href="/contact" onClick={() => setMenuOpen(false)}>{t.contact}</Link>
+          </li>
         </ul>
         <button className="lang-switch sidebar-lang" onClick={toggleLanguage}>
           {language === 'geo' ? 'ENG' : 'GEO'}

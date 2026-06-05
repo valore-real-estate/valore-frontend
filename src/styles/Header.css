@@ -323,3 +323,28 @@
   .header-right { display: none; }
   .hamburger { display: flex; }
 }
+
+/* ─── NAV LINK RESETS ─── */
+/* Remove default anchor styles from desktop nav */
+.nav-links li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Remove default anchor styles from sidebar nav */
+.sidebar-links li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+/* Remove default anchor styles from logo when wrapped in Link */
+a.logo {
+  text-decoration: none;
+  color: inherit;
+}

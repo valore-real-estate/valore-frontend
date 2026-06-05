@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sansation');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ─── PAGE ROOT ─── */
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+/* ─── HERO ─── */
+.contact-hero {
+  width: 100%;
+  background-image:linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.497) 50%,
+      rgba(0, 0, 0, 0.273) 100%
+    ),url('/pictures/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 64px 90px;
+  box-sizing: border-box;
+  border-radius: 0 0 190px 0;
+}
+
+.contact-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-hero-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.868);
+}
+
+.contact-hero-label.eng { font-family: 'Sansation', sans-serif; }
+.contact-hero-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.12em; }
+
+.contact-hero-title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.contact-hero-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.contact-hero-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+.contact-hero-desc {
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: rgba(255, 255, 255, 0.778);
+  line-height: 1.85;
+  margin: 0;
+  max-width: 520px;
+}
+
+.contact-hero-desc.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.contact-hero-desc.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+/* decorative circles */
+.contact-hero-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-hero-circle.c1 { width: 500px; height: 500px; top: -180px; right: -80px; }
+.contact-hero-circle.c2 { width: 320px; height: 320px; top: -60px; right: 180px; }
+.contact-hero-circle.c3 { width: 180px; height: 180px; bottom: -60px; left: 40%; border-color: rgba(255,255,255,0.04); }
+
+/* ─── MAIN ─── */
+.contact-main {
+  padding: 72px 64px 100px;
+  box-sizing: border-box;
+}
+
+.contact-main-centered {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ─── INFO CARD ─── */
+.contact-info-card {
+  background: #003649;
+  border-radius: 0 48px 0 48px;
+  padding: 52px 56px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.8s ease both;
+}
+
+.contact-info-card::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.contact-info-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.contact-info-card-title {
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.contact-info-card-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.contact-info-card-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+.contact-info-card-desc {
+  font-size: clamp(12px, 1vw, 13px);
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.contact-info-card-desc.eng { font-family: 'Sansation', sans-serif; }
+.contact-info-card-desc.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+/* divider */
+.contact-info-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 28px 0;
+}
+
+/* ─── INFO GRID (2x2) ─── */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: opacity 0.2s ease;
+}
+
+a.contact-info-item:hover { opacity: 0.72; }
+.contact-info-item.no-link { cursor: default; }
+
+.contact-info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+a.contact-info-item:hover .contact-info-icon {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-info-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-info-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contact-info-item-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-info-item-label.eng { font-family: 'Sansation', sans-serif; }
+.contact-info-item-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.08em; }
+
+.contact-info-item-value {
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.contact-info-item-value.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.contact-info-item-value.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+/* ─── BOTTOM ROW (hours + social) ─── */
+.contact-bottom-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* hours */
+.contact-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.contact-hours-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 4px;
+}
+
+.contact-hours-title.eng { font-family: 'Sansation', sans-serif; }
+.contact-hours-title.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.08em; }
+
+.contact-hours-row {
+  font-size: clamp(12px, 1vw, 14px);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.contact-hours-row.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.contact-hours-row.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+/* social */
+.contact-social-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.contact-social-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-social-title.eng { font-family: 'Sansation', sans-serif; }
+.contact-social-title.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.08em; }
+
+.contact-social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.contact-social-btn:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.contact-social-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 860px) {
+  .contact-main {
+    padding: 56px 40px 80px;
+  }
+
+  .contact-info-card {
+    padding: 44px 40px;
+    border-radius: 0 40px 0 40px;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-bottom-row {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .contact-social-block {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 72px 28px 64px;
+  }
+
+  .contact-main {
+    padding: 40px 20px 64px;
+  }
+
+  .contact-info-card {
+    padding: 36px 28px;
+    border-radius: 0 32px 0 32px;
+  }
+}
