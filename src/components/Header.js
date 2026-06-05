@@ -11,8 +11,16 @@ function Header() {
     geo: { home: 'მთავარი', estate: 'უძრავი ქონება', about: 'ჩვენს შესახებ', contact: 'კონტაქტი' },
     eng: { home: 'Home', estate: 'Real Estate', about: 'About Us', contact: 'Contact' }
   }
-
   const t = translations[language]
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleHomeClick = () => {
+    scrollToTop()
+    setMenuOpen(false)
+  }
 
   return (
     <>
@@ -20,7 +28,7 @@ function Header() {
         <div className="header-inner">
 
           {/* Logo */}
-          <div className="logo">
+          <div className="logo" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
             <span className="logo-text">Valore</span>
             <span className="logo-dot">.</span>
           </div>
@@ -29,7 +37,7 @@ function Header() {
           <div className="header-right">
             <nav className="nav">
               <ul className="nav-links">
-                <li>{t.home}</li>
+                <li onClick={handleHomeClick}>{t.home}</li>
                 <li>{t.estate}</li>
                 <li>{t.about}</li>
                 <li>{t.contact}</li>
@@ -46,7 +54,6 @@ function Header() {
             <span></span>
             <span></span>
           </button>
-
         </div>
       </header>
 
@@ -59,7 +66,7 @@ function Header() {
       {/* Mobile Sidebar */}
       <div className={`sidebar ${menuOpen ? 'open' : ''} ${language === 'eng' ? 'lang-eng' : ''}`}>
         <div className="sidebar-header">
-          <div className="logo">
+          <div className="logo" onClick={handleHomeClick} style={{ cursor: 'pointer' }}>
             <span className="logo-text">Valore</span>
             <span className="logo-dot">.</span>
           </div>
@@ -67,14 +74,12 @@ function Header() {
             ✕
           </button>
         </div>
-
         <ul className="sidebar-links">
-          <li onClick={() => setMenuOpen(false)}>{t.home}</li>
+          <li onClick={handleHomeClick}>{t.home}</li>
           <li onClick={() => setMenuOpen(false)}>{t.estate}</li>
           <li onClick={() => setMenuOpen(false)}>{t.about}</li>
           <li onClick={() => setMenuOpen(false)}>{t.contact}</li>
         </ul>
-
         <button className="lang-switch sidebar-lang" onClick={toggleLanguage}>
           {language === 'geo' ? 'ENG' : 'GEO'}
         </button>
