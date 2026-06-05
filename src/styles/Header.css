@@ -350,3 +350,36 @@ a.logo {
   text-decoration: none;
   color: inherit;
 }
+
+/* Make the link fill the entire li hit area */
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: inherit; /* inherits whatever padding you have on li */
+}
+
+.sidebar-links li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-links li a {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Logo link reset */
+a.logo {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
