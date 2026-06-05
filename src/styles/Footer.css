@@ -395,3 +395,25 @@
 
   .footer-bottom-divider { display: none; }
 }
+
+
+/* ─── APOLLO CREATIONS CREDIT ─── */
+.footer-apollo {
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em;
+}
+
+.footer-apollo.eng { font-family: 'Sansation', sans-serif; }
+.footer-apollo.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.01em; }
+
+.footer-apollo-link {
+  font-family: 'Sansation', sans-serif;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color 0.22s ease;
+}
+
+.footer-apollo-link:hover {
+  color: rgba(255,255,255,0.85);
+}

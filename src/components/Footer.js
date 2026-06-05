@@ -194,8 +194,16 @@ function Footer() {
               : `© ${new Date().getFullYear()} Valore. All rights reserved.`}
           </span>
           <span className="footer-bottom-divider" />
-          <span className={`footer-made ${lang}`}>
-            {isGeo ? 'დამზადებულია საქართველოში' : 'Made in Georgia'}
+          <span className={`footer-apollo ${lang}`}>
+            {isGeo ? 'დიზაინი და დეველოპმენტი:' : 'Designed & Developed by'}{' '}
+            <a
+              href="https://apollocreations.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-apollo-link"
+            >
+              Apollo Creations
+            </a>
           </span>
         </div>
       </div>
