@@ -4,7 +4,7 @@
 
 /* ─── CONTAINER ─── */
 .whyus-container {
-  width: 100%;
+  width: 97%;
   min-height: 75vh;
   background: #003649;
   border-radius: 60px 60px 60px 60px;
@@ -16,6 +16,8 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  margin-left:auto;
+margin-right:auto;
 }
 
 /* subtle background texture — two faint radial glows */
