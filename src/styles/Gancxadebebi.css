@@ -234,4 +234,7 @@
   .gcx-card-img-wrap {
     height: 180px;
   }
+  .gcx-card:hover .gcx-card-img {
+  transform: scale(1);
+}
 }
