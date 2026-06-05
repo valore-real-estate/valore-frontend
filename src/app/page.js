@@ -2,6 +2,8 @@ import Landing from '../components/Landing'
 import Category from '../components/Category'
 import WhyUs from '../components/WhyUs'
 import Gancxadebebi from '../components/Gancxadebebi'
+import Cta from '../components/Cta'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Category />
       <WhyUs />
       <Gancxadebebi />
+      <Cta />
+      <Footer />
     </div>
   );
 }
