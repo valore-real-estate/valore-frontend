@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sansation');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap');
+
+/* ─── PAGE ROOT ─── */
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f7f4;
+}
+
+/* ─── SHARED ─── */
+.about-section-label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: rgba(0, 54, 73, 0.4);
+  display: block;
+}
+.about-section-label.eng { font-family: 'Sansation', sans-serif; }
+.about-section-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.1em; }
+.about-section-label.light { color: rgba(255,255,255,0.4); }
+
+.about-section-line {
+  width: 40px;
+  height: 1.5px;
+  background: rgba(0, 54, 73, 0.18);
+  margin-top: 10px;
+}
+.about-section-line.light { background: rgba(255,255,255,0.22); }
+
+.about-section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 64px;
+  box-sizing: border-box;
+}
+
+/* ─── HERO ─── */
+.about-hero {
+  width: 100%;
+  background-image:linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.497) 50%,
+      rgba(0, 0, 0, 0.273) 100%
+    ),url('/pictures/about.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 64px 90px;
+  box-sizing: border-box;
+    border-radius: 0 0 190px 0;
+}
+
+.about-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-hero-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.805);
+}
+.about-hero-label.eng { font-family: 'Sansation', sans-serif; }
+.about-hero-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.12em; }
+
+.about-hero-title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+}
+.about-hero-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.about-hero-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+.about-hero-desc {
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.85;
+  margin: 0;
+  max-width: 520px;
+}
+.about-hero-desc.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.about-hero-desc.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+.about-hero-deco { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+.about-hero-circle { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.06); }
+.about-hero-circle.c1 { width: 500px; height: 500px; top: -180px; right: -80px; }
+.about-hero-circle.c2 { width: 320px; height: 320px; top: -60px; right: 180px; }
+.about-hero-circle.c3 { width: 180px; height: 180px; bottom: -60px; left: 40%; border-color: rgba(255,255,255,0.04); }
+
+/* ═══════════════════════════════════════
+   ── MISSION — beautiful centered quote
+═══════════════════════════════════════ */
+.about-mission {
+  padding: 96px 64px 88px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,54,73,0.07);
+  background: #f8f7f4;
+  position: relative;
+  overflow: hidden;
+}
+
+/* faint watermark "V" behind the quote */
+.about-mission::before {
+  content: 'V';
+  position: absolute;
+  font-family: 'Sansation', sans-serif;
+  font-size: 420px;
+  font-weight: 700;
+  color: rgba(0, 54, 73, 0.028);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+.about-mission-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+/* label row with lines on each side */
+.about-mission-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.about-mission-line-deco {
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,54,73,0.2));
+}
+
+.about-mission-tag-row .about-mission-line-deco:last-child {
+  background: linear-gradient(to left, transparent, rgba(0,54,73,0.2));
+}
+
+.about-mission-label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: rgba(0, 54, 73, 0.38);
+  white-space: nowrap;
+}
+.about-mission-label.eng { font-family: 'Sansation', sans-serif; }
+.about-mission-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.1em; }
+
+/* the quote itself */
+.about-mission-quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: center;
+  font-size: clamp(19px, 2.2vw, 28px);
+  font-weight: 600;
+  color: #003649;
+  line-height: 1.7;
+  position: relative;
+}
+
+.about-mission-quote.eng {
+  font-family: 'Sansation', sans-serif;
+  letter-spacing: 0.01em;
+}
+.about-mission-quote.geo {
+  font-family: 'Noto Sans Georgian', sans-serif;
+  font-weight: 500;
+}
+
+/* opening quote mark */
+.about-mission-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Georgia, serif;
+  font-size: 80px;
+  color: rgba(0, 54, 73, 0.08);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* three dot ornament */
+.about-mission-ornament {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.about-mission-ornament span {
+  display: block;
+  border-radius: 50%;
+  background: rgba(0, 54, 73, 0.18);
+}
+
+.about-mission-ornament span:nth-child(1),
+.about-mission-ornament span:nth-child(3) {
+  width: 5px;
+  height: 5px;
+}
+
+.about-mission-ornament span:nth-child(2) {
+  width: 7px;
+  height: 7px;
+  background: rgba(0, 54, 73, 0.28);
+}
+
+/* ─── TEAM ─── */
+.about-team-section {
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(0,54,73,0.07);
+}
+
+.about-team-header {
+  margin-bottom: 48px;
+}
+
+.about-team-desc {
+  font-size: clamp(12px, 1vw, 14px);
+  color: rgba(0,54,73,0.4);
+  margin: 14px 0 0;
+  line-height: 1.6;
+}
+.about-team-desc.eng { font-family: 'Sansation', sans-serif; }
+.about-team-desc.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+.about-team-grid {
+  display: flex;
+  gap: 56px;
+}
+
+.about-founder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: aboutFadeUp 0.8s ease both;
+}
+
+@keyframes aboutFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.about-founder-photo-wrap {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(0,54,73,0.13);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  background: #003649;
+  box-shadow: 0 8px 32px rgba(0,54,73,0.12);
+}
+
+.about-founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.about-founder-photo-fallback {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #003649;
+  font-family: 'Sansation', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+}
+
+.about-founder-name {
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 700;
+  color: #003649;
+  margin: 0;
+  text-align: center;
+}
+.about-founder-name.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.about-founder-name.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+.about-founder-role {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(0,54,73,0.38);
+  text-align: center;
+}
+.about-founder-role.eng { font-family: 'Sansation', sans-serif; }
+.about-founder-role.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.08em; }
+
+/* ─── VALUES ─── */
+.about-values-section {
+  background: #003649;
+  padding: 80px 0 100px;
+  position: relative;
+  overflow: hidden;
+  width: 97%;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  border-radius: 60px;
+}
+
+.about-values-section::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.about-values-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 64px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.about-values-header { margin-bottom: 48px; }
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.about-value-card {
+  padding: 36px 32px;
+  border: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: background 0.22s ease;
+}
+.about-value-card:hover { background: rgba(255,255,255,0.04); }
+
+.about-value-number {
+  font-family: 'Sansation', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: rgba(255,255,255,0.18);
+}
+
+.about-value-title {
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+.about-value-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
+.about-value-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+.about-value-desc {
+  font-size: clamp(12px, 1vw, 14px);
+  color: rgba(255,255,255,0.42);
+  line-height: 1.75;
+  margin: 0;
+}
+.about-value-desc.eng { font-family: 'Sansation', sans-serif; }
+.about-value-desc.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .about-section-inner,
+  .about-values-inner { padding: 0 40px; }
+  .about-mission { padding: 72px 40px 64px; }
+  .about-values-grid { grid-template-columns: 1fr; gap: 2px; }
+  .about-team-grid { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .about-hero { padding: 72px 28px 64px; }
+  .about-mission { padding: 56px 24px 52px; }
+  .about-section-inner,
+  .about-values-inner { padding: 0 24px; }
+  .about-team-section,
+  .about-values-section { padding: 56px 0 72px; }
+  .about-team-grid { flex-direction: column; align-items: center; gap: 36px; }
+  .about-mission-quote { font-size: clamp(17px, 4.5vw, 22px); }
+}

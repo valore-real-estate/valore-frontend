@@ -9,7 +9,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const translations = {
-    geo: { home: 'მთავარი', estate: 'უძრავი ქონება', about: 'ჩვენს შესახებ', contact: 'კონტაქტი' },
+    geo: { home: 'მთავარი', estate: 'უძრავი ქონება', about: 'ჩვენ შესახებ', contact: 'კონტაქტი' },
     eng: { home: 'Home', estate: 'Real Estate', about: 'About Us', contact: 'Contact' }
   }
 

@@ -46,7 +46,7 @@ const navLinks = {
   geo: [
     { label: 'მთავარი',       href: '/' },
     { label: 'უძრავი ქონება', href: '/properties' },
-    { label: 'ჩვენს შესახებ', href: '/about' },
+    { label: 'ჩვენ შესახებ', href: '/about' },
     { label: 'კონტაქტი',      href: '/contact' },
   ],
   eng: [
