@@ -411,7 +411,8 @@
 }
 
 @media (max-width: 600px) {
-  .about-hero { padding: 72px 28px 64px; }
+  .about-hero { padding: 72px 28px 64px;
+padding-top: 120px }
   .about-mission { padding: 56px 24px 52px; }
   .about-section-inner,
   .about-values-inner { padding: 0 24px; }

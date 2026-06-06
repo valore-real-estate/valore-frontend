@@ -360,6 +360,7 @@ a.contact-info-item:hover .contact-info-icon {
 @media (max-width: 600px) {
   .contact-hero {
     padding: 72px 28px 64px;
+    padding-top: 120px;
   }
 
   .contact-main {
