@@ -1,14 +1,14 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import Filter from './Filter'
+import ListingHero from './ListingHero'
 import { useLanguage } from './LanguageContext'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
 import Link from 'next/link'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import '../styles/Listing.css'
 import '../styles/Gancxadebebi.css'
 
 const API = 'https://valore-backend-ro8e.onrender.com/api/properties'
+const PER_PAGE = 12
 
 function SkeletonCard() {
   return (
@@ -93,67 +93,135 @@ function ListingCard({ item, isGeo }) {
   )
 }
 
-function Gancxadebebi() {
+function applyFilters(listings, filters) {
+  if (!filters) return listings
+  return listings.filter(item => {
+    if (filters.type && item.type !== filters.type) return false
+    if (filters.minPrice && item.price < Number(filters.minPrice)) return false
+    if (filters.maxPrice && item.price > Number(filters.maxPrice)) return false
+    if (filters.minArea && item.area < Number(filters.minArea)) return false
+    if (filters.maxArea && item.area > Number(filters.maxArea)) return false
+    if (filters.rooms && String(item.rooms) !== filters.rooms) return false
+    if (filters.condition && item.condition !== filters.condition) return false
+    if (filters.renovation && item.renovation !== filters.renovation) return false
+    if (filters.city && !item.city?.geo?.toLowerCase().includes(filters.city.toLowerCase()) &&
+        !item.city?.eng?.toLowerCase().includes(filters.city.toLowerCase())) return false
+    if (filters.district && !item.district?.geo?.toLowerCase().includes(filters.district.toLowerCase()) &&
+        !item.district?.eng?.toLowerCase().includes(filters.district.toLowerCase())) return false
+    return true
+  }).sort((a, b) => {
+    switch (filters.sort) {
+      case 'price_asc':  return a.price - b.price
+      case 'price_desc': return b.price - a.price
+      case 'area_asc':   return a.area - b.area
+      case 'area_desc':  return b.area - a.area
+      default:           return new Date(b.createdAt) - new Date(a.createdAt)
+    }
+  })
+}
+
+function PaginationBar({ current, total, onChange }) {
+  if (total <= 1) return null
+
+  const pages = []
+  for (let i = 1; i <= total; i++) {
+    if (i === 1 || i === total || i === current || i === current - 1 || i === current + 1) {
+      pages.push(i)
+    } else if (i === current - 2 || i === current + 2) {
+      pages.push('...')
+    }
+  }
+  const deduped = pages.filter((p, i) => p !== '...' || pages[i - 1] !== '...')
+
+  return (
+    <div className="listing-pagination">
+      <button
+        className="listing-page-btn listing-page-btn--arrow"
+        onClick={() => onChange(current - 1)}
+        disabled={current === 1}
+      >←</button>
+
+      {deduped.map((p, i) =>
+        p === '...' ? (
+          <span key={`dots-${i}`} className="listing-page-dots">…</span>
+        ) : (
+          <button
+            key={p}
+            className={`listing-page-btn ${current === p ? 'active' : ''}`}
+            onClick={() => onChange(p)}
+          >{p}</button>
+        )
+      )}
+
+      <button
+        className="listing-page-btn listing-page-btn--arrow"
+        onClick={() => onChange(current + 1)}
+        disabled={current === total}
+      >→</button>
+    </div>
+  )
+}
+
+function Listing() {
   const { language } = useLanguage()
   const isGeo = language === 'geo'
+  const [filters, setFilters] = useState(null)
   const [listings, setListings] = useState([])
   const [loading, setLoading] = useState(true)
+  const [page, setPage] = useState(1)
+  const gridRef = useRef(null)
 
   useEffect(() => {
     setLoading(true)
-    fetch(`${API}?limit=4&sort=newest`)
+    fetch(API)
       .then(r => r.json())
       .then(data => {
         const arr = Array.isArray(data) ? data : (data.properties || data.listings || data.data || [])
-        setListings(arr.slice(0, 4))
+        setListings(arr)
         setLoading(false)
       })
       .catch(err => { console.error(err); setLoading(false) })
   }, [])
 
-  return (
-    <div className="gancxadebebi-container" id="gancxadebebi">
-      <div className="category-title">
-        <h2 className={`cat-title-text ${isGeo ? 'geo' : 'eng'}`}>
-          {isGeo ? 'ახალი განცხადებები' : 'Latest Listings'}
-        </h2>
-        <div className="cat-title-divider" />
-        <p className={`cat-title-desc ${isGeo ? 'geo' : 'eng'}`}>
-          {isGeo
-            ? 'აღმოაჩინეთ ახალი და ექსკლუზიური განცხადებები'
-            : 'Discover the newest and most exclusive property listings'}
-        </p>
-      </div>
+  const handleFilterChange = (f) => {
+    setFilters(f)
+    setPage(1)
+  }
 
-      <div className="gcx-grid">
+  const filtered = applyFilters(listings, filters)
+  const totalPages = Math.ceil(filtered.length / PER_PAGE)
+  const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+
+  const handlePageChange = (p) => {
+    setPage(p)
+    gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  return (
+    <div className="listing-wrapper">
+      <ListingHero />
+      <Filter lang={isGeo ? 'geo' : 'eng'} onFilterChange={handleFilterChange} />
+
+      <div className="listing-grid" ref={gridRef}>
         {loading
-          ? Array.from({ length: 4 }).map((_, i) => <SkeletonCard key={i} />)
-          : listings.map(item => <ListingCard key={item._id} item={item} isGeo={isGeo} />)
+          ? Array.from({ length: 12 }).map((_, i) => <SkeletonCard key={i} />)
+          : paginated.length > 0
+            ? paginated.map(item => <ListingCard key={item._id} item={item} isGeo={isGeo} />)
+            : <p className={`listing-empty ${isGeo ? 'geo' : 'eng'}`}>
+                {isGeo ? 'განცხადება ვერ მოიძებნა' : 'No listings found'}
+              </p>
         }
       </div>
 
-      <div className="gcx-swiper-wrap">
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={16}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          className="gcx-swiper"
-        >
-          {loading
-            ? Array.from({ length: 4 }).map((_, i) => (
-                <SwiperSlide key={i}><SkeletonCard /></SwiperSlide>
-              ))
-            : listings.map(item => (
-                <SwiperSlide key={item._id}>
-                  <ListingCard item={item} isGeo={isGeo} />
-                </SwiperSlide>
-              ))
-          }
-        </Swiper>
-      </div>
+      {!loading && (
+        <PaginationBar
+          current={page}
+          total={totalPages}
+          onChange={handlePageChange}
+        />
+      )}
     </div>
   )
 }
 
-export default Gancxadebebi
+export default Listing

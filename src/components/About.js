@@ -27,6 +27,7 @@ function About() {
         { title: 'პროფესიონალიზმი', desc: 'მაღალი სტანდარტი მომსახურებისა და შედეგის მიღწევის გზაზე.' },
         { title: 'ღირებულება',      desc: 'ყველა გადაწყვეტილება ორიენტირებულია კლიენტის ინტერესზე.' },
       ],
+      memberText: 'Valore Real Estate საქართველოს უძრავი ქონების ეროვნული ასოციაციის წევრია, რაც პროფესიონალიზმისა და სანდოობის კიდევ ერთი დასტურია.'
     },
     eng: {
       heroLabel: 'About Us',
@@ -46,6 +47,7 @@ function About() {
         { title: 'Professionalism', desc: 'High standards in service delivery and achieving results.' },
         { title: 'Value',           desc: "Every decision is centred around the client's best interest." },
       ],
+      memberText: 'Valore Real Estate is a member of the National Association of Real Estate of Georgia, a further testament to our professionalism and trustworthiness.'
     },
   }
 
@@ -84,6 +86,14 @@ function About() {
           </div>
         </div>
       </section>
+
+      {/* ── MEMBERSHIP ── */}
+<section className="about-member-section">
+  <div className="about-member-inner">
+    <div className="about-member-icon" aria-hidden="true">✦</div>
+    <p className={`about-member-text ${lang}`}>{t.memberText}</p>
+  </div>
+</section>
 
       {/* ── TEAM ── */}
       <section className="about-team-section">

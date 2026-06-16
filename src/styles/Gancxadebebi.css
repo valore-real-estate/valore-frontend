@@ -238,3 +238,118 @@
   transform: scale(1);
 }
 }
+
+/* ─────────────────────────────────────────
+   SKELETON LOADING — append to Gancxadebebi.css
+   ───────────────────────────────────────── */
+
+/* Shimmer keyframe */
+@keyframes gcx-shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+/* Base skeleton element */
+.gcx-skeleton {
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 54, 73, 0.07) 25%,
+    rgba(0, 54, 73, 0.13) 50%,
+    rgba(0, 54, 73, 0.07) 75%
+  );
+  background-size: 600px 100%;
+  animation: gcx-shimmer 1.6s ease-in-out infinite;
+}
+
+/* Disable card hover effects on skeleton */
+.gcx-card--skeleton {
+  cursor: default;
+  pointer-events: none;
+}
+
+.gcx-card--skeleton:hover {
+  transform: none;
+  box-shadow: 0 4px 24px rgba(0, 54, 73, 0.10);
+}
+
+/* Image placeholder */
+.gcx-skeleton--img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+/* Title lines */
+.gcx-skeleton--title {
+  height: 14px;
+  width: 85%;
+  margin-bottom: 8px;
+}
+
+.gcx-skeleton--title-short {
+  width: 55%;
+  margin-bottom: 12px;
+}
+
+/* Location line */
+.gcx-skeleton--location {
+  height: 12px;
+  width: 70%;
+  margin-bottom: 12px;
+}
+
+/* Meta badges (sqm / rooms) */
+.gcx-skeleton--badge {
+  height: 26px;
+  width: 68px;
+  border-radius: 6px;
+}
+
+/* Price labels */
+.gcx-skeleton--label {
+  height: 11px;
+  width: 44px;
+  margin-bottom: 5px;
+}
+
+/* Price values */
+.gcx-skeleton--price {
+  height: 18px;
+  width: 72px;
+}
+
+/* Arrow button placeholder */
+.gcx-skeleton--arrow {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Stagger animation delay per card so they don't pulse in lockstep */
+.gcx-grid > .gcx-card--skeleton:nth-child(1) .gcx-skeleton,
+.gcx-swiper .swiper-slide:nth-child(1) .gcx-skeleton {
+  animation-delay: 0s;
+}
+.gcx-grid > .gcx-card--skeleton:nth-child(2) .gcx-skeleton,
+.gcx-swiper .swiper-slide:nth-child(2) .gcx-skeleton {
+  animation-delay: 0.15s;
+}
+.gcx-grid > .gcx-card--skeleton:nth-child(3) .gcx-skeleton,
+.gcx-swiper .swiper-slide:nth-child(3) .gcx-skeleton {
+  animation-delay: 0.3s;
+}
+.gcx-grid > .gcx-card--skeleton:nth-child(4) .gcx-skeleton,
+.gcx-swiper .swiper-slide:nth-child(4) .gcx-skeleton {
+  animation-delay: 0.45s;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .gcx-skeleton {
+    animation: none;
+    background: rgba(0, 54, 73, 0.08);
+  }
+}

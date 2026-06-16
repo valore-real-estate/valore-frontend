@@ -43,7 +43,7 @@ function Header() {
                   <Link href="/" onClick={handleHomeClick}>{t.home}</Link>
                 </li>
                 <li>
-                  <Link href="/properties">{t.estate}</Link>
+                  <Link href="/listing">{t.estate}</Link>
                 </li>
                 <li>
                   <Link href="/about">{t.about}</Link>

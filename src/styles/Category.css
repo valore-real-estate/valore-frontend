@@ -98,10 +98,6 @@
   flex-shrink: 0;
 }
 
-.cat-card:hover {
-  transform: translateY(-6px);
-}
-
 /* ─── FIXED SIZE IMAGE — 320×320 desktop ─── */
 .cat-card-img-wrap {
   width: 320px;
@@ -119,8 +115,18 @@
   transition: transform 0.38s ease;
 }
 
-.cat-card:hover .cat-card-img {
-  transform: scale(1.05);
+/* ─── HOVER EFFECTS — mouse-driven devices only ───
+   Scoped with (hover: hover) and (pointer: fine) so touchscreens
+   never trigger these (touch taps emulate :hover and were causing
+   the lift/zoom to clip against the card/swiper on phones). */
+@media (hover: hover) and (pointer: fine) {
+  .cat-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .cat-card:hover .cat-card-img {
+    transform: scale(1.05);
+  }
 }
 
 /* ─── FLOATING LABEL ─── */
@@ -218,10 +224,6 @@
     border-radius: 4px;
     transition: width 0.25s ease;
   }
-
-  .cat-card:hover .cat-card-img {
-  transform: scale(1);
-}
 
   .cat-card-name.eng { font-size: 12px; }
   .cat-card-name.geo { font-size: 14px; }
