@@ -10,7 +10,7 @@ function Header() {
 
   const translations = {
     geo: { home: 'მთავარი', estate: 'უძრავი ქონება', about: 'ჩვენ შესახებ', contact: 'კონტაქტი' },
-    eng: { home: 'Home', estate: 'Real Estate', about: 'About Us', contact: 'Contact' }
+    eng: { home: 'Home', estate: 'Real Estate', about: 'About Us', contact: 'Contact' },
   }
 
   const t = translations[language]
@@ -31,8 +31,7 @@ function Header() {
 
           {/* Logo */}
           <Link href="/" className="logo" onClick={scrollToTop}>
-            <span className="logo-text">Valore</span>
-            <span className="logo-dot">.</span>
+            <img src="/pictures/valore-logo2.png" alt="Valore" className="header-logo-img" />
           </Link>
 
           {/* Desktop Nav */}
@@ -78,8 +77,7 @@ function Header() {
       <div className={`sidebar ${menuOpen ? 'open' : ''} ${language === 'eng' ? 'lang-eng' : ''}`}>
         <div className="sidebar-header">
           <Link href="/" className="logo" onClick={handleHomeClick}>
-            <span className="logo-text">Valore</span>
-            <span className="logo-dot">.</span>
+            <img src="/pictures/valore-logo2.png" alt="Valore" className="header-logo-img" />
           </Link>
           <button className="close-btn" onClick={() => setMenuOpen(false)} aria-label="Close menu">
             ✕

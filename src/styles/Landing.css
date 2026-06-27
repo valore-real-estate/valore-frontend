@@ -251,3 +251,26 @@
     text-align: center;
   }
 }
+
+.landing-logo-img {
+  width: 680px;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .landing-logo-img {
+    width: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-logo-img {
+    width: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-logo-img {
+    width: 260px;
+  }
+}

@@ -3,6 +3,8 @@ import React from 'react'
 import { useLanguage } from './LanguageContext'
 import '../styles/Landing.css'
 
+const logo = '/pictures/valore-logo2.png'
+
 function Landing() {
   const { language } = useLanguage()
   const isGeo = language === 'geo'
@@ -13,18 +15,9 @@ function Landing() {
 
         {/* LOGO */}
         <div className="landing-logo">
-          <div className="landing-logo-inner">
-            <div className="logo-top-line" />
-            <span className="logo-wordmark">VALORE</span>
-            <div className="logo-subtitle-row">
-              <div className="logo-dash" />
-              <span className="logo-tagword">REAL ESTATE</span>
-              <div className="logo-dash" />
-            </div>
-            <div className="logo-bottom-line" />
-          </div>
-        </div>
-
+  <img src={logo} alt="Valore Real Estate" className="landing-logo-img" />
+</div>
+       
         {/* HEADLINE */}
         <div className="landing-headline">
           <p className={`headline-sub ${isGeo ? 'geo' : 'eng'}`}>

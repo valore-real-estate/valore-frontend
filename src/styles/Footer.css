@@ -416,3 +416,48 @@
 .footer-apollo-link:hover {
   color: rgba(255,255,255,0.85);
 }
+
+
+.footer-logo-img {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.footer-logo-line-top,
+.footer-logo-line-bottom {
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.55) 0%,
+    rgba(255,255,255,0.15) 70%,
+    transparent 100%
+  );
+}
+
+.footer-logo-line-top  { margin-bottom: 10px; }
+.footer-logo-line-bottom { margin-top: 10px; }
+
+.footer-logo-img {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .footer-logo-img { width: 170px; }
+}
+
+@media (max-width: 640px) {
+  .footer-logo-img { width: 140px; }
+}

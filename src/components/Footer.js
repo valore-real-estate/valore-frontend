@@ -3,6 +3,8 @@ import React from 'react'
 import { useLanguage } from './LanguageContext'
 import '../styles/Footer.css'
 
+const logo = '/pictures/valore-logo2.png'
+
 const InstagramIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -72,17 +74,14 @@ function Footer() {
       <div className="footer-inner">
 
         {/* ── COL 1 — Brand ── */}
-        <div className="footer-col footer-brand">
-          <div className="footer-logo-wrap">
-            <div className="footer-logo-lines footer-logo-line-top" />
-            <span className="footer-wordmark">VALORE</span>
-            <div className="footer-logo-lines footer-logo-line-bottom" />
-            <div className="footer-logo-sub-row">
-              <span className="footer-logo-dash" />
-              <span className="footer-tagword">REAL ESTATE</span>
-              <span className="footer-logo-dash" />
-            </div>
-          </div>
+       <div className="footer-col footer-brand">
+  
+  <div className="footer-logo-wrap">
+  <div className="footer-logo-line-top" />
+  <img src={logo} alt="Valore Real Estate" className="footer-logo-img" />
+  <div className="footer-logo-line-bottom" />
+</div>
+
           <p className={`footer-brand-desc ${lang}`}>
             {isGeo
               ? 'პროფესიონალური უძრავი ქონების სერვისი — ვპოულობთ საუკეთესო გადაწყვეტილებას თქვენთვის.'
