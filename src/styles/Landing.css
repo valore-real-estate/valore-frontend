@@ -274,3 +274,7 @@
     width: 260px;
   }
 }
+
+.btn{
+  text-decoration: none;
+}

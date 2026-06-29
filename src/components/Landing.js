@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import React from 'react'
 import { useLanguage } from './LanguageContext'
 import '../styles/Landing.css'
@@ -33,14 +34,14 @@ function Landing() {
         </div>
 
         {/* BUTTONS */}
-        <div className="landing-buttons">
-          <button className={`btn btn-solid ${isGeo ? 'geo' : 'eng'}`}>
-            {isGeo ? 'უძრავი ქონების ძებნა' : 'Find Property'}
-          </button>
-          <button className={`btn btn-outline ${isGeo ? 'geo' : 'eng'}`}>
-            {isGeo ? 'დაგვიკავშირდით' : 'Contact Us'}
-          </button>
-        </div>
+      <div className="landing-buttons">
+  <Link href="/listing" className={`btn btn-solid ${isGeo ? 'geo' : 'eng'}`}>
+    {isGeo ? 'უძრავი ქონების ძებნა' : 'Find Property'}
+  </Link>
+  <a href="tel:+995555910910" className={`btn btn-outline ${isGeo ? 'geo' : 'eng'}`}>
+    {isGeo ? 'დაგვიკავშირდით' : 'Contact Us'}
+  </a>
+</div>
 
       </div>
     </div>
