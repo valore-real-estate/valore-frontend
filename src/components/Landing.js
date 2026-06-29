@@ -22,8 +22,8 @@ function Landing() {
         <div className="landing-headline">
           <p className={`headline-sub ${isGeo ? 'geo' : 'eng'}`}>
             {isGeo
-              ? 'ჩვენ ვქმნით ღირებულებას თითოეული კლიენტისთვის'
-              : 'We create value for every client'}
+              ? 'ჩვენ ვქმნით ღირებულებას თითოეული თქვენგანისთვის'
+              : 'We create value for you every step of the way'}
           </p>
           <p className={`headline-desc ${isGeo ? 'geo' : 'eng'}`}>
             {isGeo
