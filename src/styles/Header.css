@@ -392,6 +392,6 @@ a.logo {
 
 @media (max-width: 768px) {
   .header-logo-img {
-    height: 42px;
+    height: 32px;
   }
 }
