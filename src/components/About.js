@@ -15,7 +15,7 @@ function About() {
       heroDesc: 'Valore არის თანამედროვე უძრავი ქონების სააგენტო, რომელიც ქმნის ღირებულებას თითოეული კლიენტისთვის.',
       missionLabel: 'ჩვენი მისია',
       missionText: 'კომპანია სთავაზობს მომხმარებლებს პროფესიონალურ მომსახურეობას საცხოვრებელი და საინვესტიციო უძრავი ქონების ყიდვა-გაყიდვასა და გაქირავებაში.',
-      teamLabel: 'გუნდი',
+      teamLabel: 'დამფუძნებლები',
       teamDesc: 'გამოცდილი და ერთგული პროფესიონალები',
       founders: [
         { name: 'ლაშა გოგუაძე', nameEng: 'Lasha Goguadze', role: 'თანადამფუძნებელი', photo: '/pictures/lasha.jpg' },
@@ -35,7 +35,7 @@ function About() {
       heroDesc: 'Valore is a modern real estate agency that creates value for every client.',
       missionLabel: 'Our Mission',
       missionText: 'We offer professional services in the purchase, sale, and rental of residential and investment real estate — built on trust, expertise, and a genuine commitment to our clients.',
-      teamLabel: 'Our Team',
+      teamLabel: 'Founders',
       teamDesc: 'Experienced and dedicated professionals',
       founders: [
         { name: 'Lasha Goguadze', nameEng: 'Lasha Goguadze', role: 'Co-Founder', photo: '/pictures/lasha.jpg' },
