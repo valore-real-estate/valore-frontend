@@ -88,7 +88,7 @@ function Header() {
             <Link href="/" onClick={handleHomeClick}>{t.home}</Link>
           </li>
           <li>
-            <Link href="/properties" onClick={() => setMenuOpen(false)}>{t.estate}</Link>
+            <Link href="/listing" onClick={() => setMenuOpen(false)}>{t.estate}</Link>
           </li>
           <li>
             <Link href="/about" onClick={() => setMenuOpen(false)}>{t.about}</Link>
