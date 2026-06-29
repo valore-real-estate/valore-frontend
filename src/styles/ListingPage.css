@@ -8,7 +8,21 @@
   --blue-border: rgba(0, 54, 73, 0.12);
   --text-muted: rgba(0, 54, 73, 0.5);
 }
+.lp-wrapper {
+  position: relative;
+}
 
+.lp-wrapper::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, #003649 0%, transparent 100%);
+  pointer-events: none;
+  z-index: -10;
+}
 .lp-wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -49,6 +63,7 @@
 .lp-carousel {
   width: 100%;
   margin-bottom: 48px;
+  margin-top: 80px;
 }
 
 .lp-carousel-main {
