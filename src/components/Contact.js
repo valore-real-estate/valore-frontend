@@ -58,9 +58,9 @@ function Contact() {
     geo: {
       heroLabel: 'კონტაქტი',
       heroTitle: 'დაგვიკავშირდით',
-      heroDesc: 'ჩვენი გუნდი მზადაა დაგეხმაროთ უძრავი ქონების ნებისმიერ საკითხში. დაუკავშირდით ჩვენ - პასუხს სწრაფად მოგცემთ.',
+      heroDesc: 'ჩვენი გუნდი მზადაა დაგეხმაროთ უძრავი ქონების ნებისმიერ საკითხში.',
       cardTitle: 'საკონტაქტო ინფორმაცია',
-      cardDesc: 'მოგვწერეთ ან დაგვიკავშირდით პირდაპირ',
+      cardDesc: 'დაგვიკავშირდით',
       phone: 'ტელეფონი',
       email: 'ელ. ფოსტა',
       whatsapp: 'WhatsApp',
@@ -74,7 +74,7 @@ function Contact() {
     eng: {
       heroLabel: 'Contact',
       heroTitle: 'Get In Touch',
-      heroDesc: "Our team is ready to assist you with any real estate matter. Reach out and we'll get back to you promptly.",
+      heroDesc: "Our team is ready to assist you with any real estate matter.",
       cardTitle: 'Contact Information',
       cardDesc: 'Write to us or get in touch directly',
       phone: 'Phone',
