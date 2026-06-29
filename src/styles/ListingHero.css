@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  padding: 10px 64px 20px;
+  padding: 100px 64px 90px;
   box-sizing: border-box;
   border-radius: 0 0 190px 0;
 }
@@ -23,15 +23,14 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 40px;
 }
 
 .listing-hero-label {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+   font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.805);
 }
 
 .listing-hero-title {
@@ -94,5 +93,8 @@
 
   .listing-hero-title {
     font-size: 1.6rem;
+  }
+  .listing-hero-inner{
+    margin-top: 40px;
   }
 }
