@@ -34,7 +34,8 @@
 }
 
 .cat-title-text.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
 }
 
 
@@ -70,7 +71,8 @@
 }
 
 .cat-title-desc.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
 }
 
 .cat-title-desc.eng {
@@ -163,7 +165,8 @@
 }
 
 .cat-card-name.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
   font-size: 15px;
 }
 
