@@ -67,6 +67,7 @@
   font-weight: 700;
   margin: 0 0 8px 0;
   line-height: 1.35;
+
 }
 
 .gcx-card-title.eng {
@@ -76,7 +77,8 @@
 }
 
 .gcx-card-title.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
 }
 
 /* ─── LOCATION ─── */

@@ -25,7 +25,8 @@
   display: block;
 }
 .about-section-label.eng { font-family: 'Sansation', sans-serif; }
-.about-section-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.1em; }
+.about-section-label.geo {font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; letter-spacing: 0.1em; }
 .about-section-label.light { color: rgba(255,255,255,0.4); }
 
 .about-section-line {
@@ -80,7 +81,8 @@
   color: rgba(255, 255, 255, 0.805);
 }
 .about-hero-label.eng { font-family: 'Sansation', sans-serif; }
-.about-hero-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.12em; }
+.about-hero-label.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; letter-spacing: 0.12em; }
 
 .about-hero-title {
   font-size: clamp(36px, 5vw, 64px);
@@ -90,7 +92,8 @@
   margin: 0;
 }
 .about-hero-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
-.about-hero-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.about-hero-title.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 .about-hero-desc {
   font-size: clamp(13px, 1.2vw, 16px);
@@ -197,7 +200,8 @@
   letter-spacing: 0.01em;
 }
 .about-mission-quote.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
   font-weight: 500;
 }
 
@@ -319,7 +323,8 @@
   text-align: center;
 }
 .about-founder-name.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
-.about-founder-name.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.about-founder-name.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 .about-founder-role {
   font-size: 10px;
@@ -330,7 +335,8 @@
   text-align: center;
 }
 .about-founder-role.eng { font-family: 'Sansation', sans-serif; }
-.about-founder-role.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.08em; }
+.about-founder-role.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; letter-spacing: 0.08em; }
 
 /* ─── VALUES ─── */
 .about-values-section {
@@ -396,7 +402,8 @@
   margin: 0;
 }
 .about-value-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
-.about-value-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.about-value-title.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 .about-value-desc {
   font-size: clamp(12px, 1vw, 14px);
