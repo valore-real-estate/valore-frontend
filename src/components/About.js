@@ -23,9 +23,9 @@ function About() {
       ],
       valuesLabel: 'ჩვენი ღირებულებები',
       values: [
-        { title: 'სანდოობა',        desc: 'გამჭვირვალე და პატიოსანი ურთიერთობა ყველა კლიენტთან.' },
-        { title: 'პროფესიონალიზმი', desc: 'მაღალი სტანდარტი მომსახურებისა და შედეგის მიღწევის გზაზე.' },
-        { title: 'ღირებულება',      desc: 'ყველა გადაწყვეტილება ორიენტირებულია კლიენტის ინტერესზე.' },
+        { title: 'სანდოობა',        desc: 'ნდობაზე დაფუძნებული ურთიერთობა თითოეულ თქვენგანთან.' },
+        { title: 'პროფესიონალიზმი', desc: 'გამოცდილებაზე დაფუძნებული მომსახურება და მაღალი ხარისხი.' },
+        { title: 'ღირებულება',      desc: 'ყველა გადაწყვეტილება თქვენი ინტერესების გათვალისწინებით.' },
       ],
       memberText: 'Valore Real Estate საქართველოს უძრავი ქონების ეროვნული ასოციაციის წევრია, რაც პროფესიონალიზმისა და სანდოობის კიდევ ერთი დასტურია.'
     },
@@ -42,11 +42,20 @@ function About() {
         { name: 'Anuka Antia',    nameEng: 'Anuka Antia',    role: 'Co-Founder', photo: '/pictures/anuka.jpg' },
       ],
       valuesLabel: 'Our Values',
-      values: [
-        { title: 'Trust',           desc: 'Transparent and honest relationships with every client.' },
-        { title: 'Professionalism', desc: 'High standards in service delivery and achieving results.' },
-        { title: 'Value',           desc: "Every decision is centred around the client's best interest." },
-      ],
+     values: [
+  {
+    title: 'Trust',
+    desc: 'Building trusted relationships with each and every one of you.',
+  },
+  {
+    title: 'Professionalism',
+    desc: 'Experience-driven service with the highest standards of quality.',
+  },
+  {
+    title: 'Value',
+    desc: 'Every decision is made with your best interests in mind.',
+  },
+],
       memberText: 'Valore Real Estate is a member of the National Association of Real Estate of Georgia, a further testament to our professionalism and trustworthiness.'
     },
   }

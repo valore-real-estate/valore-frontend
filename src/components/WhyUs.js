@@ -6,17 +6,17 @@ import '../styles/WhyUs.css'
 const reasons = [
   {
     icon: '◈',
-    eng: 'Expert Knowledge',
-    geo: 'ექსპერტული ცოდნა',
-    descEng: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
-    descGeo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
+    eng: 'Professional Excellence',
+    geo: 'პროფესიონალიზმი',
+    descEng: 'Our team has in-depth knowledge of the real estate market and continuously monitors its changes. We provide professional guidance and data-driven insights to help you make safe, informed, and profitable real estate decisions.',
+    descGeo: 'ჩვენი გუნდი კარგად იცნობს უძრავი ქონების ბაზარს და მუდმივად აკვირდება მის ცვლილებებს. გთავაზობთ პროფესიონალურ რჩევებსა და მონაცემებზე დაფუძნებულ გადაწყვეტილებებს, რათა არჩევანი იყოს უსაფრთხო და მომგებიანი.',
   },
   {
     icon: '◈',
     eng: 'Trusted Network',
-    geo: 'სანდო ქსელი',
-    descEng: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
-    descGeo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
+    geo: 'სანდო პარტნიორობა',
+    descEng: 'Every client is unique to Valore. At every stage of the process, we work with complete transparency, responsibility, and continuous communication to ensure you feel confident and at ease.',
+    descGeo: 'Valore-სთვის ყველა კლიენტი უნიკალურია. პროცესის თითოეულ ეტაპზე ვმუშაობთ სრული გამჭვირვალობით, პასუხისმგებლობითა და მუდმივი კომუნიკაციით, რათა თქვენ თავი მშვიდად იგრძნოთ',
   },
   {
     icon: '◈',
