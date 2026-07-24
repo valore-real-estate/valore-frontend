@@ -82,7 +82,8 @@
 }
 
 .footer-col-title.eng { font-family: 'Sansation', sans-serif; }
-.footer-col-title.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.08em; }
+.footer-col-title.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; letter-spacing: 0.08em; }
 
 .footer-col-divider {
   width: 40px;
@@ -161,7 +162,8 @@
 }
 
 .footer-brand-desc.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.015em; }
-.footer-brand-desc.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.footer-brand-desc.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 /* ─── NAV LIST ─── */
 .footer-nav-list {
@@ -189,7 +191,8 @@
 .footer-nav-link:last-child { border-bottom: none; }
 
 .footer-nav-link.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.03em; }
-.footer-nav-link.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.footer-nav-link.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 .footer-nav-link:hover {
   color: #ffffff;
