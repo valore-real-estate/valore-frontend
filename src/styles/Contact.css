@@ -53,7 +53,8 @@
 }
 
 .contact-hero-label.eng { font-family: 'Sansation', sans-serif; }
-.contact-hero-label.geo { font-family: 'Noto Sans Georgian', sans-serif; letter-spacing: 0.12em; }
+.contact-hero-label.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; letter-spacing: 0.12em; }
 
 .contact-hero-title {
   font-size: clamp(36px, 5vw, 64px);
@@ -64,7 +65,8 @@
 }
 
 .contact-hero-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
-.contact-hero-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.contact-hero-title.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 .contact-hero-desc {
   font-size: clamp(13px, 1.2vw, 16px);
@@ -75,7 +77,8 @@
 }
 
 .contact-hero-desc.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
-.contact-hero-desc.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.contact-hero-desc.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 /* decorative circles */
 .contact-hero-deco {
@@ -149,7 +152,8 @@
 }
 
 .contact-info-card-title.eng { font-family: 'Sansation', sans-serif; letter-spacing: 0.02em; }
-.contact-info-card-title.geo { font-family: 'Noto Sans Georgian', sans-serif; }
+.contact-info-card-title.geo { font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on; }
 
 .contact-info-card-desc {
   font-size: clamp(12px, 1vw, 13px);
