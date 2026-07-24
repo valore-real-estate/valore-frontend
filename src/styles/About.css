@@ -242,7 +242,7 @@
 
 /* ─── TEAM ─── */
 .about-team-section {
-  padding: 80px 0;
+  padding: 30px 0;
   border-bottom: 1px solid rgba(0,54,73,0.07);
 }
 
@@ -278,10 +278,10 @@
 }
 
 .about-founder-photo-wrap {
-  width: 148px;
-  height: 148px;
-  border-radius: 50%;
-  border: 2.5px solid rgba(0,54,73,0.13);
+  width: 240px;
+  height: 240px;
+  border-radius: 0.2rem;
+  border: 0.5px solid rgba(0,54,73,0.13);
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
@@ -423,7 +423,7 @@ padding-top: 120px }
   .about-section-inner,
   .about-values-inner { padding: 0 24px; }
   .about-team-section,
-  .about-values-section { padding: 56px 0 72px; }
+  .about-values-section { padding: 56px 0 32px; }
   .about-team-grid { flex-direction: column; align-items: center; gap: 36px; }
   .about-mission-quote { font-size: clamp(17px, 4.5vw, 22px); }
 }

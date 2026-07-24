@@ -18,8 +18,9 @@ function About() {
       teamLabel: 'დამფუძნებლები',
       teamDesc: 'გამოცდილი და ერთგული პროფესიონალები',
       founders: [
+        { name: 'ანუკა ანთია',   nameEng: 'Anuka Antia',    role: 'თანადამფუძნებელი', photo: '/pictures/anuk.jpeg' },
         { name: 'ლაშა გოგუაძე', nameEng: 'Lasha Goguadze', role: 'თანადამფუძნებელი', photo: '/pictures/lasha.jpg' },
-        { name: 'ანუკა ანთია',   nameEng: 'Anuka Antia',    role: 'თანადამფუძნებელი', photo: '/pictures/anuka.jpg' },
+        
       ],
       valuesLabel: 'ჩვენი ღირებულებები',
       values: [

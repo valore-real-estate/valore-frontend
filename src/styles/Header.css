@@ -29,6 +29,8 @@
     0 48px 80px rgba(0, 0, 0, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.54),
     inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 /* ─── Logo ─── */
@@ -39,21 +41,6 @@
   cursor: pointer;
 }
 
-.logo-text {
-  font-family: 'Sansation', sans-serif;
-  font-size: 1.55rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-}
-
-.logo-dot {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: #003649;
-  line-height: 1;
-}
 
 /* ─── Right Side ─── */
 .header-right {
@@ -322,6 +309,11 @@
   letter-spacing: 1px;
 }
 
+.header-logo-img{
+  height: 40px;
+}
+
+
 /* ─── Mobile ─── */
 @media (max-width: 768px) {
   .header-right { display: none; }
@@ -391,7 +383,7 @@ a.logo {
 }
 
 .header-logo-img {
-  height: 55px;
+  height: 40px;
   width: auto;
   display: block;
 }
