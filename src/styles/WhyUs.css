@@ -92,7 +92,8 @@ margin-right:auto;
 }
 
 .whyus-title.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
 }
 
 .whyus-title-accent {
@@ -130,7 +131,8 @@ margin-right:auto;
 }
 
 .whyus-desc.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
 }
 
 .whyus-desc.eng {
@@ -168,7 +170,8 @@ margin-right:auto;
 }
 
 .whyus-stat-label.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
   letter-spacing: 0.02em;
 }
 
@@ -240,7 +243,8 @@ margin-right:auto;
 }
 
 .whyus-card-title.geo {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "FiraGO", sans-serif;
+  font-feature-settings: "case" on;
 }
 
 .whyus-card-desc {
