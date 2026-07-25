@@ -39,8 +39,9 @@ function About() {
       teamLabel: 'Founders',
       teamDesc: 'Experienced and dedicated professionals',
       founders: [
-        { name: 'Lasha Goguadze', nameEng: 'Lasha Goguadze', role: 'Co-Founder', photo: '/pictures/lasha.jpg' },
-        { name: 'Anuka Antia',    nameEng: 'Anuka Antia',    role: 'Co-Founder', photo: '/pictures/anuka.jpg' },
+        { name: 'Anuka Antia',    nameEng: 'Anuka Antia',    role: 'Co-Founder', photo: '/pictures/anuk.jpeg' },
+        { name: 'Lasha Goguadze', nameEng: 'Lasha Goguadze', role: 'Co-Founder', photo: '/pictures/lash.jpeg' },
+        
       ],
       valuesLabel: 'Our Values',
      values: [
