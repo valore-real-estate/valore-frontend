@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 60px 60px;
+  border-radius: 0 0 60px 0;
 }
 
 /* ─── CONTENT WRAPPER ─── */
