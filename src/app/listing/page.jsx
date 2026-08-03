@@ -1,49 +1,55 @@
-import Contact from '../../components/Contact'
+import Listing from '../../components/Listing'
 
 export const metadata = {
-  title: 'კონტაქტი | Valore Real Estate — დაგვიკავშირდით',
+  title: 'უძრავი ქონება | Valore Real Estate — ბინები, სახლები, კომერციული და მიწები',
   description:
-    'დაგვიკავშირდით Valore-ის გუნდს ნებისმიერ საკითხზე — ბინის ყიდვა, გაყიდვა ან გაქირავება. თბილისი, საქართველო. ტელეფონი, ელ. ფოსტა და WhatsApp. | Get in touch with the Valore real estate team for any question — buying, selling, or renting property. Tbilisi, Georgia. Phone, email, and WhatsApp available.',
+    'მოძებნე შენთვის სასურველი უძრავი ქონება — საცხოვრებელი, კომერციული თუ საინვესტიციო, ყველაფერი ერთ ადგილას. ბინები, სახლები, კომერციული ფართები და მიწები საქართველოში. | Find the property you\'re looking for — residential, commercial, or investment, all in one place. Apartments, houses, commercial spaces, and land in Georgia.',
   keywords: [
-    'Valore კონტაქტი',
-    'უძრავი ქონების სააგენტო თბილისი',
-    'დაგვიკავშირდით',
-    'Valore Real Estate contact',
-    'real estate agency Tbilisi contact',
-    'contact Valore Georgia',
+    'უძრავი ქონება',
+    'ბინების ყიდვა',
+    'სახლების ყიდვა',
+    'კომერციული ფართი',
+    'მიწის ყიდვა',
+    'უძრავი ქონება თბილისში',
+    'Valore განცხადებები',
+    'real estate listings Georgia',
+    'apartments for sale Tbilisi',
+    'houses for sale Georgia',
+    'commercial property Georgia',
+    'land for sale Georgia',
   ],
   alternates: {
-    canonical: 'https://valore.ge/contact',
+    canonical: 'https://valore.ge/listing-page',
   },
   openGraph: {
-    title: 'კონტაქტი | Valore Real Estate',
+    title: 'უძრავი ქონება | Valore Real Estate',
     description:
-      'ჩვენი გუნდი მზადაა დაგეხმაროთ უძრავი ქონების ნებისმიერ საკითხში. | Our team is ready to help you with any real estate matter.',
-    url: 'https://valore.ge/contact',
+      'საცხოვრებელი, კომერციული თუ საინვესტიციო — ყველაფერი ერთ ადგილას. | Residential, commercial, or investment — all in one place.',
+    url: 'https://valore.ge/listing-page',
     siteName: 'Valore Real Estate',
     locale: 'ka_GE',
     alternateLocale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://valore.ge/pictures/fbcontact.PNG',
+        url: 'https://valore.ge/pictures/fblistings.PNG',
         width: 1200,
         height: 630,
-        alt: 'Valore Real Estate — კონტაქტი',
+        alt: 'Valore Real Estate — უძრავი ქონების განცხადებები',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'კონტაქტი | Valore Real Estate',
+    title: 'უძრავი ქონება | Valore Real Estate',
     description:
-      'დაგვიკავშირდით Valore-ის გუნდს — ბინის ყიდვა, გაყიდვა ან გაქირავება.',
-    images: ['https://valore.ge/pictures/fbcontact.PNG'],
+      'მოძებნე შენთვის სასურველი უძრავი ქონება — ბინები, სახლები, კომერციული და მიწები.',
+    images: ['https://valore.ge/pictures/fblistings.PNG'],
   },
 }
 
-export default function ContactPage() {
+export default function ListingPage() {
   return (
-    <Contact />
+    <Listing />
   )
 }
