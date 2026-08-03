@@ -252,8 +252,13 @@
   gap: 8px;
 }
 
+/* Reset always pinned to the last column, right-aligned,
+   regardless of how many filter groups precede it in the grid flow */
 .filter-group--reset {
   justify-content: flex-end;
+  grid-column: -1;
+  justify-self: end;
+  align-self: end;
 }
 
 .filter-label {

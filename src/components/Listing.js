@@ -102,6 +102,7 @@ function applyFilters(listings, filters) {
     if (filters.minArea && item.area < Number(filters.minArea)) return false
     if (filters.maxArea && item.area > Number(filters.maxArea)) return false
     if (filters.rooms && String(item.rooms) !== filters.rooms) return false
+    if (filters.bedrooms && String(item.bedrooms) !== filters.bedrooms) return false
     if (filters.condition && item.condition !== filters.condition) return false
     if (filters.renovation && item.renovation !== filters.renovation) return false
     if (filters.city && !item.city?.geo?.toLowerCase().includes(filters.city.toLowerCase()) &&

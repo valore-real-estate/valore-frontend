@@ -40,6 +40,7 @@ const DEFAULT_FILTERS = {
   minArea: '',
   maxArea: '',
   rooms: '',
+  bedrooms: '',
   condition: '',
   renovation: '',
   city: '',
@@ -223,6 +224,20 @@ export default function Filter({ lang = 'geo', onFilterChange }) {
                   className={`filter-mini-pill ${fontClass} ${filters.rooms === r ? 'active' : ''}`}
                   onClick={() => handleChange('rooms', r)}>
                   {r === '' ? t('ყველა', 'Any') : r === '5' ? '5+' : r}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Bedrooms */}
+          <div className="filter-group">
+            <label className={`filter-label ${fontClass}`}>{t('საძინებლები', 'Bedrooms')}</label>
+            <div className="filter-pill-row">
+              {['', '1', '2', '3', '4', '5'].map(b => (
+                <button key={b}
+                  className={`filter-mini-pill ${fontClass} ${filters.bedrooms === b ? 'active' : ''}`}
+                  onClick={() => handleChange('bedrooms', b)}>
+                  {b === '' ? t('ყველა', 'Any') : b === '5' ? '5+' : b}
                 </button>
               ))}
             </div>
