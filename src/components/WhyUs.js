@@ -22,8 +22,8 @@ const reasons = [
     icon: '◈',
     eng: 'Premium Service',
     geo: 'პრემიუმ სერვისი',
-    descEng: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
-    descGeo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
+    descEng: 'We approach each project with individual attention and provide a service that combines quality, efficiency, and professionalism.',
+    descGeo: 'თითოეულ პროექტს ინდივიდუალური ყურადღებით ვუდგებით და გთავაზობთ მომსახურებას, რომელიც აერთიანებს ხარისხს, სისწრაფესა და პროფესიონალიზმს.',
   },
 ]
 
@@ -48,22 +48,22 @@ function WhyUs() {
 
           <p className={`whyus-desc ${isGeo ? 'geo' : 'eng'}`}>
             {isGeo
-              ? 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.'
-              : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.'}
+              ? 'ჩვენი სერვისები დაფუძნებულია ნდობაზე, პროფესიონალიზმსა და მაღალი ხარისხის მომსახურებაზე.'
+              : 'Our services are built on trust, expertise, and a commitment to providing exceptional experiences for every client.'}
           </p>
 
           <div className="whyus-stat-row">
             <div className="whyus-stat">
-              <span className="whyus-stat-num">500+</span>
+              <span className="whyus-stat-num">24/7</span>
               <span className={`whyus-stat-label ${isGeo ? 'geo' : 'eng'}`}>
-                {isGeo ? 'განხორციელებული გარიგება' : 'Deals Closed'}
+                {isGeo ? 'მუდმივი მხარდაჭერა' : 'Customer support'}
               </span>
             </div>
             <div className="whyus-stat-divider" />
             <div className="whyus-stat">
-              <span className="whyus-stat-num">12+</span>
+              <span className="whyus-stat-num">100%</span>
               <span className={`whyus-stat-label ${isGeo ? 'geo' : 'eng'}`}>
-                {isGeo ? 'წლიანი გამოცდილება' : 'Years Experience'}
+                {isGeo ? 'ზრუნვა თითოეულ გადაწყვეტილებაზე' : 'Client Care'}
               </span>
             </div>
           </div>

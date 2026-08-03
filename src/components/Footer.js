@@ -84,7 +84,7 @@ function Footer() {
 
           <p className={`footer-brand-desc ${lang}`}>
             {isGeo
-              ? 'პროფესიონალური უძრავი ქონების სერვისი — ვპოულობთ საუკეთესო გადაწყვეტილებას თქვენთვის.'
+              ? 'პროფესიონალური უძრავი ქონების სერვისი - სანდო პარტნიორი თქვენი იდეალური ქონების შერჩევის პროცესში.'
               : 'Professional real estate services — finding the best solution tailored for you.'}
           </p>
         </div>
@@ -196,12 +196,12 @@ function Footer() {
           <span className={`footer-apollo ${lang}`}>
             {isGeo ? 'დიზაინი და დეველოპმენტი:' : 'Designed & Developed by'}{' '}
             <a
-              href="https://apollocreations.net"
+              href="https://sitefy.ge/"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-apollo-link"
             >
-              Apollo Creations
+              Sitefy
             </a>
           </span>
         </div>
